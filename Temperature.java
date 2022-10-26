@@ -69,15 +69,15 @@ public class Temperature implements TemperatureInterface
 
 
     }
-    public void setDegree(double degree){
+    public void set(double degree){
     this.degree = degree;
     }
     
-    public void setScale(char scale){
+    public void set(char scale){
     this.scale = scale;
     }
     
-    public void setTemperature(double degree, char scale){
+    public void set(double degree, char scale){
     this.degree = degree;
     this.scale = scale;
     }

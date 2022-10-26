@@ -1,3 +1,4 @@
+import java.time.Year;
 
 // Author(s): Daniel Lubin 
 // Date of Last Modification: 10/25/2022
@@ -41,6 +42,10 @@ public class Temperature implements TemperatureInterface
     public void writeF(){
     System.out.print("Temperature : "+celciusToFarenheight()+ " F");
     }
+    public String toString(){
+        return String.format("Temperature: " + degree + " degrees " + scale);
+    }
+
 
     /*Methods for getting temps */
     public double getC(){

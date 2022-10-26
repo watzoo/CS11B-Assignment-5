@@ -7,16 +7,8 @@
 // File Name: CS111Boxes.java
 // This program will display 10 boxes alternating white and black with 1 random red box
 
-import java.util.Random;
-import javafx.application.Application;
-import javafx.scene.Group;
-import javafx.scene.Scene;
-import javafx.scene.paint.Color;
-import javafx.scene.shape.Rectangle;
-import javafx.stage.Stage;
-
-
-public class Temperature {
+public class Temperature implements TemperatureInterface
+{
 
     private double degree;
     private char scale;
@@ -54,6 +46,12 @@ public class Temperature {
     System.out.print("Temperature : "+celciusToFarenheight()+ " F");
     }
 
+    public double getC(){
+        return fahrenheightToCelcius();
+    }
+    public double getF(){
+        return celciusToFarenheight();
+    }
 
     public double fahrenheightToCelcius() {
     if(scale == 'C' || scale == 'c')
@@ -62,8 +60,6 @@ public class Temperature {
     return ((double)Math.round((((degree-32)*5)/9)*10))/10;   
 
     }
-
-    public 
 
     public double celciusToFarenheight() {
     if(scale == 'F' || scale == 'f')
@@ -89,7 +85,7 @@ public class Temperature {
 
 
     public boolean equals(Temperature obj){
-    if(getDegreeInCelsius() == obj.getDegreeInCelsius())
+    if(fahrenheightToCelcius() == obj.fahrenheightToCelcius())
     return true;
     return false;
     }
